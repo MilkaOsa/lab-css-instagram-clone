@@ -13,23 +13,22 @@ body {
 
 /* Header styling */
 header {
-  background: linear-gradient(to bottom, #06365f, #1c5380); /* Gradient from top to bottom */
-  height: 350px; /* Larger header height */
+  background: linear-gradient(to bottom, #3a94e2, #06365f); /* Adjust gradient colors for better contrast */
+  height: 400px; /* Increased header height for better spacing */
   width: 100%; /* Full width */
-  text-align: center;
-  position: relative; /* Position relative for logo/button */
+  position: relative;
 }
 
 .header-content {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Center vertically within the header */
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the logo and button */
+  transform: translate(-50%, -50%); /* Center horizontally */
   text-align: center;
 }
 
 .header-logo {
-  height: 80px; /* Larger logo */
+  height: 80px; /* Logo size */
 }
 
 .login-btn {
@@ -40,7 +39,10 @@ header {
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-btn:hover {
@@ -52,12 +54,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: -150px; /* Pull the content up to overlap the header */
+  margin-top: -120px; /* Reduced overlap for a cleaner look */
   position: relative;
-  z-index: 2; /* Ensure content floats above the header */
+  z-index: 2; /* Ensures content floats above header */
+  padding: 20px;
 }
 
-/* Left Section */
+/* Left Section (Phone Image) */
 .left-section {
   flex: 1;
   display: flex;
@@ -70,7 +73,7 @@ header {
   margin-right: 40px;
 }
 
-/* Right Section */
+/* Right Section (Text Box) */
 .right-section {
   flex: 1;
   max-width: 400px;
@@ -78,13 +81,13 @@ header {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  margin-left: 40px;
 }
 
 h1 {
   font-size: 24px;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 p {
@@ -96,7 +99,7 @@ p {
 .app-buttons {
   margin-top: 20px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .appstore-btn,
@@ -105,7 +108,11 @@ p {
   margin-right: 10px;
 }
 
-/* Footer styling */
+.googleplay-btn {
+  margin-right: 0;
+}
+
+/* Footer Styling */
 footer {
   text-align: center;
   padding: 20px;
@@ -137,6 +144,7 @@ footer p {
   .main-container {
     flex-direction: column;
     align-items: center;
+    margin-top: -80px; /* Less overlap on smaller screens */
   }
 
   .left-section {
@@ -145,18 +153,54 @@ footer p {
   }
 
   .iphone-image {
+    max-width: 100%; /* Ensure image scales down on smaller screens */
     margin-right: 0;
   }
 
   .right-section {
     max-width: 100%;
-    margin-top: -60px; /* Less overlap on smaller screens */
+    margin-left: 0;
   }
 
-  .header-content {
+  .app-buttons {
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .appstore-btn,
+  .googleplay-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .googleplay-btn {
+    margin-bottom: 0;
   }
 }
+
+@media (max-width: 480px) {
+  header {
+    height: 300px; /* Smaller header height for mobile */
+  }
+
+  .header-logo {
+    height: 60px; /* Slightly smaller logo */
+  }
+
+  .main-container {
+    margin-top: -60px; /* Reduced overlap for mobile */
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
 
 
 

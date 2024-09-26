@@ -21,8 +21,8 @@ header {
 
 .header-content {
   position: absolute;
-  top: 50%; /* Center vertically within the header */
-  left: 50%;
+  top: 68%; /* Center vertically within the header */
+  left: 60%;
   transform: translate(-50%, -50%); /* Center horizontally */
   text-align: center;
 }
@@ -32,7 +32,7 @@ header {
 }
 
 .login-btn {
-  background-color: #3897f0;
+  background: linear-gradient(to bottom, #3a94e2, #06365f); /* Adjust gradient colors for better contrast */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -42,7 +42,12 @@ header {
   margin-top: 15px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 30%; /* Center vertically within the header */
+  left: 130%;
+  transform: translate(-50%, -50%); /* Center horizontally */
+  text-align: center;
 }
 
 .login-btn:hover {
@@ -54,7 +59,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: -120px; /* Reduced overlap for a cleaner look */
+  margin-top: -200px; /* Reduced overlap for a cleaner look */
   position: relative;
   z-index: 2; /* Ensures content floats above header */
   padding: 20px;
@@ -64,7 +69,7 @@ header {
 .left-section {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 .iphone-image {
@@ -79,9 +84,10 @@ header {
   max-width: 400px;
   background-color: white;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 40px;
+  margin-left: 200px;
+  margin-top: 120px;
 }
 
 h1 {
